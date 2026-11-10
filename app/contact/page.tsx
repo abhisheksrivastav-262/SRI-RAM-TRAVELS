@@ -73,6 +73,12 @@ export default function Contact() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const details = Array.from(formData.entries())
+                      .map(([label, value]) => `${label}: ${String(value).trim() || "Not provided"}`)
+                      .join("\n");
+                    const message = `Namaste Sri Ram Travels!\nNew cab and Uttarakhand tour enquiry:\n${details}`;
+                    window.location.assign(`https://wa.me/916399012525?text=${encodeURIComponent(message)}`);
                     setSent(true);
                   }}
                   className="mt-6 grid gap-4"
@@ -80,17 +86,17 @@ export default function Contact() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-bold text-zinc-500 block mb-1">YOUR NAME</label>
-                      <input required placeholder="Full Name" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800] min-h-[46px]" />
+                      <input name="Name" required placeholder="Full Name" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800] min-h-[46px]" />
                     </div>
                     <div>
                       <label className="text-xs font-bold text-zinc-500 block mb-1">PHONE NUMBER</label>
-                      <input required placeholder="Your 10-digit phone number" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800] min-h-[46px]" />
+                      <input name="Phone" type="tel" required placeholder="Your 10-digit phone number" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800] min-h-[46px]" />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-3 gap-4">
                     <div>
                       <label className="text-xs font-bold text-zinc-500 block mb-1">SERVICE REQUIRED</label>
-                      <select className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]">
+                      <select name="Service required" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]">
                         <option>Travel &amp; Cab Rental</option>
                         
                         <option>Uttarakhand Sightseeing Tour</option>
@@ -99,16 +105,16 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className="text-xs font-bold text-zinc-500 block mb-1">START LOCATION</label>
-                      <input placeholder="e.g. Dehradun" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]" />
+                      <input name="Pickup location" placeholder="e.g. Dehradun" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]" />
                     </div>
                     <div>
                       <label className="text-xs font-bold text-zinc-500 block mb-1">DESTINATION</label>
-                      <input placeholder="e.g. Mussoorie, Rishikesh, Nainital" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]" />
+                      <input name="Destination" placeholder="e.g. Mussoorie, Rishikesh, Nainital" className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-3 text-sm min-h-[46px]" />
                     </div>
                   </div>
                   <div>
                     <label className="text-xs font-bold text-zinc-500 block mb-1">TRIP DETAILS</label>
-                    <textarea placeholder="Tell us your dates, group size, destinations and vehicle requirements..." rows={4} className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800]" />
+                    <textarea name="Trip details" placeholder="Tell us your dates, group size, destinations and vehicle requirements..." rows={4} className="w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800]" />
                   </div>
                   <button type="submit" className="w-full bg-black hover:bg-zinc-800 text-white py-4 rounded-full font-bold text-sm min-h-[48px]">
                     SUBMIT ENQUIRY →

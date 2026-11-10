@@ -59,6 +59,12 @@ export default function Corporate() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const details = Array.from(formData.entries())
+                      .map(([label, value]) => `${label}: ${String(value).trim() || "Not provided"}`)
+                      .join("\n");
+                    const message = `Namaste Sri Ram Travels!\nNew corporate/group travel enquiry:\n${details}`;
+                    window.location.assign(`https://wa.me/916399012525?text=${encodeURIComponent(message)}`);
                     setSent(true);
                   }}
                   className="mt-6 grid gap-3"
@@ -77,6 +83,7 @@ export default function Corporate() {
                       <label className="text-[11px] font-bold tracking-wide text-zinc-500">{label.toUpperCase()}</label>
                       <input
                         type={type}
+                        name={label}
                         required={["Company / Group Name", "Phone"].includes(label)}
                         placeholder={label}
                         className="mt-1 w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#F5B800] focus:bg-white min-h-[44px]"

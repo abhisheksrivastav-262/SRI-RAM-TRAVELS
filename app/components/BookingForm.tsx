@@ -34,8 +34,6 @@ const VEHICLES = {
 } as const;
 
 export default function BookingForm({ variant = "hero", title }: Props) {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     pickup: "",
     drop: "",
@@ -59,10 +57,8 @@ export default function BookingForm({ variant = "hero", title }: Props) {
     if (!form.pickup) e.pickup = "Required";
     if (!form.drop) e.drop = "Required";
     if (!form.date) e.date = "Required";
-    if (variant === "full") {
-      if (!form.name) e.name = "Required";
-      if (!form.phone || form.phone.length < 10) e.phone = "Valid phone required";
-    }
+    if (!form.name.trim()) e.name = "Required";
+    if (form.phone.replace(/\D/g, "").length < 10) e.phone = "Enter a valid 10-digit phone number";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -70,44 +66,25 @@ export default function BookingForm({ variant = "hero", title }: Props) {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      const catLabel = "Cab & Sightseeing Tour";
+    const message = [
+      "Namaste Sri Ram Travels!",
+      "New cab and Uttarakhand tour enquiry:",
+      `Name: ${form.name.trim()}`,
+      `Phone: ${form.phone.trim()}`,
+      `Pickup: ${form.pickup.trim()}`,
+      `Destination: ${form.drop.trim()}`,
+      `Travel date: ${form.date}`,
+      `Return date: ${form.returnDate || "Not specified"}`,
+      `Pickup time: ${form.time || "Not specified"}`,
+      `Tour/service: ${form.rideType}`,
+      `Vehicle: ${selected.name}`,
+      `Travellers: ${form.passengers}`,
+      `Additional details: ${form.notes.trim() || "None"}`,
+    ].join("\n");
 
-      const destination = form.drop;
-      const msg = `Hello Sri Ram Travels!%0A%0A*New Booking Enquiry*%0A------------------------%0A• Service: ${catLabel}%0A• From: ${form.pickup}%0A• Destination: ${destination}%0A• Start Date: ${form.date}${form.returnDate ? `%0A• Return Date: ${form.returnDate}` : ""}%0A• Tour / Ride: ${form.rideType}%0A• Vehicle: ${selected.name}%0A• Total Travellers: ${form.passengers}%0A• Contact Name: ${form.name || "Guest"}%0A• Phone: ${form.phone || "Provided on call"}%0A${form.notes ? `• Note: ${form.notes}` : ""}`;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any)._lastBookingMsg = msg;
-    }, 800);
+    const whatsappUrl = `https://wa.me/916399012525?text=${encodeURIComponent(message)}`;
+    window.location.assign(whatsappUrl);
   };
-
-  if (submitted) {
-    return (
-      <div className="bg-white rounded-[24px] p-6 sm:p-10 text-center shadow-premium border border-zinc-100">
-        <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto mb-4">✓</div>
-        <h3 className="font-display text-2xl font-bold text-zinc-900">Enquiry Received Successfully!</h3>
-        <p className="text-zinc-600 mt-3 text-sm leading-relaxed">
-          Thank you for contacting <strong>Sri Ram Travels</strong>.<br />
-          Our Uttarakhand travel desk will check availability and get back to you immediately with the best quote.<br />
-          For instant booking or urgent help, call us directly at <a href="tel:+916399012525" className="font-bold text-black underline">+91 63990 12525</a>.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="tel:+916399012525" className="bg-black text-white px-6 py-3.5 rounded-full font-bold text-sm min-h-[44px] flex items-center justify-center">Call +91 63990 12525</a>
-          <a
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            href={`https://wa.me/916399012525?text=${(typeof window !== "undefined" && (window as any)._lastBookingMsg) || "Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"}`}
-            target="_blank"
-            className="bg-[#25D366] text-white px-6 py-3.5 rounded-full font-bold text-sm min-h-[44px] flex items-center justify-center gap-1.5"
-          >
-            <span>✆</span> Confirm on WhatsApp
-          </a>
-        </div>
-        <button onClick={() => setSubmitted(false)} className="mt-4 text-sm text-zinc-500 underline min-h-[44px]">Make another enquiry</button>
-      </div>
-    );
-  }
 
   const inputBase =
     "w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-[16px] sm:text-sm focus:outline-none focus:border-[#F5B800] focus:bg-white transition placeholder:text-zinc-400 min-h-[46px]";
@@ -182,6 +159,16 @@ export default function BookingForm({ variant = "hero", title }: Props) {
           />
         </div>
 
+        <div>
+          <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">PICKUP TIME (OPTIONAL)</label>
+          <input
+            type="time"
+            value={form.time}
+            onChange={(e) => setForm({ ...form, time: e.target.value })}
+            className={inputBase}
+          />
+        </div>
+
         {/* Tour / Ride Type */}
         <div>
           <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">TOUR / SERVICE TYPE</label>
@@ -191,7 +178,7 @@ export default function BookingForm({ variant = "hero", title }: Props) {
             className={inputBase}
           >
             <option>Dehradun Sightseeing (Robber’s Cave &amp; Loop)</option>
-            <option>Mussoorie Scenic Tour (Mussoorie &amp; Auli)</option>
+            <option>Mussoorie Scenic Tour</option>
             <option>Uttarakhand Jungle Safari (Rajaji National Park / Jim Corbett National Park)</option>
             <option>Jolly Grant Airport (DED) Transfer</option>
             <option>Dehradun Railway Station Transfer</option>
@@ -226,31 +213,39 @@ export default function BookingForm({ variant = "hero", title }: Props) {
           </select>
         </div>
 
-        {/* Full contact fields */}
-        {(variant === "full" || variant === "card") && (
-          <>
-            <div>
-              <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">YOUR NAME</label>
-              <input
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Your full name"
-                className={`${inputBase} ${errors.name ? "border-red-400" : ""}`}
-              />
-              {errors.name && <span className="text-xs text-red-500 mt-1 block">{errors.name}</span>}
-            </div>
-            <div>
-              <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">PHONE NUMBER</label>
-              <input
-                value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                placeholder="73190 68773"
-                className={`${inputBase} ${errors.phone ? "border-red-400" : ""}`}
-              />
-              {errors.phone && <span className="text-xs text-red-500 mt-1 block">{errors.phone}</span>}
-            </div>
-          </>
-        )}
+        {/* Contact details */}
+        <div>
+          <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">YOUR NAME</label>
+          <input
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            placeholder="Your full name"
+            className={`${inputBase} ${errors.name ? "border-red-400" : ""}`}
+          />
+          {errors.name && <span className="text-xs text-red-500 mt-1 block">{errors.name}</span>}
+        </div>
+        <div>
+          <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">PHONE NUMBER</label>
+          <input
+            type="tel"
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            placeholder="Your 10-digit mobile number"
+            className={`${inputBase} ${errors.phone ? "border-red-400" : ""}`}
+          />
+          {errors.phone && <span className="text-xs text-red-500 mt-1 block">{errors.phone}</span>}
+        </div>
+
+        <div className="sm:col-span-2">
+          <label className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 mb-1 block">ADDITIONAL DETAILS</label>
+          <textarea
+            value={form.notes}
+            onChange={(e) => setForm({ ...form, notes: e.target.value })}
+            placeholder="Anything else we should know about your trip?"
+            rows={3}
+            className={inputBase}
+          />
+        </div>
       </div>
 
       {/* Vehicle information */}
@@ -273,17 +268,9 @@ export default function BookingForm({ variant = "hero", title }: Props) {
 
       <button
         type="submit"
-        disabled={loading}
-        className="mt-4 w-full bg-[#F5B800] hover:bg-[#E6AC00] disabled:opacity-70 text-black font-extrabold tracking-wide py-3.5 sm:py-4 rounded-full shadow-gold transition flex items-center justify-center gap-2 text-sm min-h-[48px]"
+        className="mt-4 w-full bg-[#F5B800] hover:bg-[#E6AC00] text-black font-extrabold tracking-wide py-3.5 sm:py-4 rounded-full shadow-gold transition flex items-center justify-center gap-2 text-sm min-h-[48px]"
       >
-        {loading ? (
-          <>
-            <span className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
-            CHECKING AVAILABILITY...
-          </>
-        ) : (
-          <>ENQUIRE NOW &amp; GET BEST QUOTE →</>
-        )}
+        SEND FULL DETAILS ON WHATSAPP →
       </button>
 
       <div className="mt-2.5 grid grid-cols-2 gap-2">
