@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/fleet", label: "Fleet" },
   { href: "/airport-transfer", label: "Airport" },
   { href: "/outstation", label: "Outstation" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/local-taxi", label: "Local" },
   { href: "/contact", label: "Contact" },
 ];
@@ -73,7 +74,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Drawer */}
-      <div className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl transition-all duration-300 overflow-hidden ${open ? "max-h-[500px] border-t border-zinc-100" : "max-h-0"}`}>
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl transition-all duration-300 overflow-y-auto ${open ? "max-h-[85vh] border-t border-zinc-100" : "max-h-0"}`}>
         <nav className="p-6 grid grid-cols-2 gap-2">
           {navLinks.map((l) => (
             <Link

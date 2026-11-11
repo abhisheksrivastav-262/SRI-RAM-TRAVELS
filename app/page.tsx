@@ -1,6 +1,8 @@
 import HeroSlideshow from "./components/HeroSlideshow";
 import PricingSection from "./components/PricingSection";
 import Link from "next/link";
+import DestinationGallery from "./components/DestinationGallery";
+import { destinations } from "./data/destinations";
 
 export default function Home() {
   return (
@@ -198,9 +200,9 @@ export default function Home() {
             <div className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#F5B800]">UTTARAKHAND • PICTURES &amp; VIDEO</div>
             <h2 className="font-display text-2xl font-bold sm:text-4xl">A glimpse of the hills, rivers and valleys</h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/70">
-              Explore Dehradun, Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett and Auli. Browse destination photos on our tour page and watch the Uttarakhand Tourism video gallery.
+              Explore Nainital, Mussoorie, Rishikesh, Haridwar, Auli, Jim Corbett and the Himalayan river valleys. See all destination photos in our gallery and watch the Uttarakhand Tourism video gallery.
             </p>
-            <Link href="/outstation" className="mt-5 inline-flex rounded-full bg-[#F5B800] px-6 py-3 text-sm font-bold text-black">VIEW DESTINATIONS →</Link>
+            <Link href="/gallery" className="mt-5 inline-flex rounded-full bg-[#F5B800] px-6 py-3 text-sm font-bold text-black">VIEW DESTINATION GALLERY →</Link>
           </div>
           <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-premium">
             <iframe
@@ -213,6 +215,20 @@ export default function Home() {
               allowFullScreen
             />
           </div>
+        </div>
+      </section>
+
+      <section className="bg-zinc-50 py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="mb-7 flex flex-col gap-3 sm:mb-9 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">PHOTO GALLERY • UTTARAKHAND</p>
+              <h2 className="font-display text-2xl font-bold text-zinc-950 sm:text-4xl">Places you can explore with us</h2>
+              <p className="mt-2 max-w-2xl text-sm text-zinc-600">Nainital, Mussoorie, Char Dham, Panch Prayag and more — all photos displayed without cropping.</p>
+            </div>
+            <Link href="/gallery" className="inline-flex min-h-[44px] items-center font-bold text-zinc-900 underline decoration-2 underline-offset-4 decoration-[#F5B800]">Open full gallery →</Link>
+          </div>
+          <DestinationGallery places={destinations} />
         </div>
       </section>
 

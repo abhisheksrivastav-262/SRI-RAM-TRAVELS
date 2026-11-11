@@ -1,4 +1,6 @@
 import Link from "next/link";
+import DestinationGallery from "../components/DestinationGallery";
+import { featuredDestinations } from "../data/destinations";
 
 export const metadata = {
   title: "Uttarakhand Outstation & Tour Cabs | Sri Ram Travels",
@@ -44,27 +46,11 @@ export default function Outstation() {
           <h2 className="font-display text-2xl font-bold mt-12 text-zinc-900">Popular Holiday Destinations</h2>
           <p className="text-xs text-zinc-400 mt-1">Book a cab for local sightseeing or an outstation tour. Call +91 63990 12525.</p>
 
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { n: "Dehradun", desc: "Uttarakhand sightseeing • Robber’s Cave", img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" },
-              { n: "Mussoorie", desc: "Gun Hill • Orchid Nurseries", img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80" },
-              { n: "Rishikesh & Haridwar", desc: "Ganga riverfronts • temples • local sightseeing", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" },
-              { n: "Jim Corbett National Park", desc: "Forest landscapes • wildlife safaris", img: "https://images.unsplash.com/photo-1534187886935-1e1236e856c3?w=600&q=80" },
-              { n: "Tehri Lake", desc: "Lake views • mountain scenery", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" },
-              { n: "Chopta & Auli", desc: "Mountain scenery • hill journeys", img: "https://images.unsplash.com/photo-1476514525535-07fb6b4ae8d1?w=600&q=80" },
-              { n: "Nainital", desc: "Lake views • hill town sightseeing", img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" },
-              { n: "Dehradun", desc: "Robber’s Cave • Sahastradhara • city sights", img: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80" },
-            ].map((d) => (
-              <div key={d.n} className="group relative overflow-hidden rounded-2xl h-44 shadow-sm">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={d.img} alt={d.n} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 p-4">
-                  <div className="text-white font-bold text-base">{d.n}</div>
-                  <div className="text-white/70 text-xs">{d.desc}</div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-6">
+            <DestinationGallery places={featuredDestinations} compact />
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/gallery" className="inline-flex min-h-[44px] items-center rounded-full bg-black px-6 py-3 text-sm font-bold text-white hover:bg-zinc-800">VIEW ALL DESTINATION PHOTOS →</Link>
           </div>
 
           <div className="mt-10 bg-black rounded-[24px] p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-white">

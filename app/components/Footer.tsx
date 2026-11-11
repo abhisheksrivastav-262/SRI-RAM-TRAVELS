@@ -56,6 +56,7 @@ export default function Footer() {
               <li><Link href="/services" className="hover:text-[#F5B800] transition">Uttarakhand Jungle Safari</Link></li>
               <li><Link href="/airport-transfer" className="hover:text-[#F5B800] transition">Jolly Grant &amp; Dehradun Railway Station Transfer</Link></li>
               <li><Link href="/fleet" className="hover:text-[#F5B800] transition">Our Premium Fleet</Link></li>
+              <li><Link href="/gallery" className="hover:text-[#F5B800] transition">Uttarakhand Photo Gallery</Link></li>
             </ul>
           </div>
 
