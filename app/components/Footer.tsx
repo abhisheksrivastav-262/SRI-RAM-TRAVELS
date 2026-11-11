@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -22,7 +23,16 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" aria-label="Sri Ram Travels home" className="mb-4 inline-flex items-center gap-2.5">
-              <span aria-hidden="true" className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#F5B800] text-lg font-black text-[#073b2a]">SR</span>
+              <span className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-[#082452] ring-2 ring-[#F5B800] shadow-md sm:h-20 sm:w-20">
+                <Image
+                  src="/sri-ram-travels-logo.webp"
+                  alt="Sri Ram Travels logo"
+                  width={1254}
+                  height={1254}
+                  sizes="(max-width: 640px) 64px, 80px"
+                  className="h-full w-full rounded-full object-cover"
+                />
+              </span>
               <span className="font-display text-sm font-extrabold leading-tight tracking-wide text-white sm:text-base">
                 SRI RAM <span className="text-[#B7F000]">TRAVELS</span>
               </span>

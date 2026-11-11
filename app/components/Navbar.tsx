@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -26,7 +27,17 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
         {/* Logo */}
         <Link href="/" aria-label="Sri Ram Travels home" className="flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2.5 group">
-          <span aria-hidden="true" className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#F5B800] text-lg font-black text-[#073b2a]">SR</span>
+          <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#082452] ring-2 ring-[#F5B800] shadow-md sm:h-16 sm:w-16">
+            <Image
+              src="/sri-ram-travels-logo.webp"
+              alt="Sri Ram Travels logo"
+              width={1254}
+              height={1254}
+              priority
+              sizes="(max-width: 640px) 48px, 64px"
+              className="h-full w-full rounded-full object-cover"
+            />
+          </span>
           <span className="font-display text-[12px] font-extrabold leading-tight tracking-wide text-white sm:text-base">
             SRI RAM <span className="text-[#B7F000]">TRAVELS</span>
           </span>
