@@ -26,11 +26,11 @@ export default function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
         {/* Logo */}
-        <Link href="/" aria-label="Sri Ram Travels home" className="flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2.5 group">
+        <Link href="/" aria-label="Siyaram Travels home" className="flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2.5 group">
           <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#082452] ring-2 ring-[#F5B800] shadow-md sm:h-16 sm:w-16">
             <Image
-              src="/sri-ram-travels-logo.webp"
-              alt="Sri Ram Travels logo"
+              src="/siyaram-travels-logo.png"
+              alt="Siyaram Travels logo"
               width={1254}
               height={1254}
               priority
@@ -39,7 +39,7 @@ export default function Navbar() {
             />
           </span>
           <span className="font-display text-[12px] font-extrabold leading-tight tracking-wide text-white sm:text-base">
-            SRI RAM <span className="text-[#B7F000]">TRAVELS</span>
+            SIYARAM <span className="text-[#B7F000]">TRAVELS</span>
           </span>
         </Link>
 

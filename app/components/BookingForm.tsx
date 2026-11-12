@@ -67,7 +67,7 @@ export default function BookingForm({ variant = "hero", title }: Props) {
     e.preventDefault();
     if (!validate()) return;
     const message = [
-      "Namaste Sri Ram Travels!",
+      "Namaste Siyaram Travels!",
       "New cab and Uttarakhand tour enquiry:",
       `Name: ${form.name.trim()}`,
       `Phone: ${form.phone.trim()}`,
@@ -290,7 +290,7 @@ export default function BookingForm({ variant = "hero", title }: Props) {
       </div>
 
       <p className="text-[11px] text-center text-zinc-400 mt-2.5">
-        Sri Ram Travels • Serving Dehradun • Mussoorie • Rishikesh • Haridwar • Nainital
+        Siyaram Travels • Serving Dehradun • Mussoorie • Rishikesh • Haridwar • Nainital
       </p>
     </form>
   );

@@ -3,7 +3,7 @@ import DestinationGallery from "../components/DestinationGallery";
 import { featuredDestinations } from "../data/destinations";
 
 export const metadata = {
-  title: "Uttarakhand Outstation & Tour Cabs | Sri Ram Travels",
+  title: "Uttarakhand Outstation & Tour Cabs | Siyaram Travels",
   description: "Outstation cabs and holiday tour packages across Dehradun, Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett, Tehri Lake and Auli. Call +91 63990 12525.",
 };
 
@@ -20,7 +20,7 @@ export default function Outstation() {
             EXPLORE THE WONDERS OF <br /><span className="text-[#F5B800]">UTTARAKHAND &amp; HILLS</span>
           </h1>
           <p className="text-white/80 mt-3 max-w-xl text-xs sm:text-sm leading-relaxed">
-            Sri Ram Travels offers reliable outstation journeys across Dehradun, Mussoorie, Uttarakhand, and beyond — one-way drops, multi-day circuits, and round trips.
+            Siyaram Travels offers reliable outstation journeys across Dehradun, Mussoorie, Uttarakhand, and beyond — one-way drops, multi-day circuits, and round trips.
           </p>
         </div>
       </section>

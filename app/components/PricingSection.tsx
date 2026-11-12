@@ -80,7 +80,7 @@ export default function PricingSection({ compact = false }: { compact?: boolean 
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide text-emerald-800 uppercase">
               <span className="w-1.5 h-1.5 bg-[#F5B800] rounded-full animate-pulse" />
-              SRI RAM TRAVELS FLEET
+              SIYARAM TRAVELS FLEET
             </div>
             <h2 className="font-display text-[26px] sm:text-4xl font-bold mt-4 leading-tight">
               Curated Vehicles for <span className="text-[#D4A000]">Hills &amp; Uttarakhand</span>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Uttarakhand Cab & Sightseeing Services | Sri Ram Travels",
+  title: "Uttarakhand Cab & Sightseeing Services | Siyaram Travels",
   description: "Cab rental, sightseeing, airport transfers and Uttarakhand tours from Dehradun. Call +91 63990 12525.",
 };
 
@@ -57,7 +57,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
         <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-[#F5B800] font-bold tracking-[0.2em] text-xs mb-3 uppercase">
-            SRI RAM TRAVELS (SRI RAM TRAVELS)
+            SIYARAM TRAVELS (SIYARAM TRAVELS)
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-black text-white leading-tight">
             Cab &amp; Sightseeing Services <br />

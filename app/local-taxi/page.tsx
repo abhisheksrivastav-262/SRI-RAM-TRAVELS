@@ -1,7 +1,7 @@
 import BookingForm from "../components/BookingForm";
 
 export const metadata = {
-  title: "Local Sightseeing & Taxi | Sri Ram Travels",
+  title: "Local Sightseeing & Taxi | Siyaram Travels",
   description: "Local taxi, sightseeing and hourly cab rentals in Dehradun, Mussoorie, Uttarakhand and Dehradun. Call +91 63990 12525.",
 };
 
@@ -46,7 +46,7 @@ export default function LocalTaxi() {
               ))}
             </div>
             <div className="mt-8 bg-zinc-900 text-white rounded-2xl p-6">
-              <h3 className="font-bold text-base text-[#F5B800]">Why riders choose Sri Ram Travels</h3>
+              <h3 className="font-bold text-base text-[#F5B800]">Why riders choose Siyaram Travels</h3>
               <ul className="mt-3 space-y-2 text-xs sm:text-sm text-white/80">
                 <li>• Experienced mountain drivers who know every local viewpoint and shortcut</li>
                 <li>• Transparent fixed and per-km pricing with no hidden bargaining</li>

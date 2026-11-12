@@ -1,7 +1,7 @@
 import BookingForm from "../components/BookingForm";
 
 export const metadata = {
-  title: "Book a Cab or Tour | Sri Ram Travels",
+  title: "Book a Cab or Tour | Siyaram Travels",
   description: "Book cabs and sightseeing tours in Dehradun, Mussoorie, Rishikesh, Haridwar, Nainital and across Uttarakhand. Call +91 63990 12525.",
 };
 
@@ -11,7 +11,7 @@ export default function BookPage() {
       <section className="bg-black text-white py-14 sm:py-16">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-[#F5B800] font-bold tracking-[0.2em] text-xs mb-3 uppercase">
-            SRI RAM TRAVELS (SRI RAM TRAVELS)
+            SIYARAM TRAVELS (SIYARAM TRAVELS)
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-black leading-tight">
             BOOK A CAB OR TOUR <br />

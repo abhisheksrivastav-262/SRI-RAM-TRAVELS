@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us | Sri Ram Travels",
-  description: "Sri Ram Travels is based in Dehradun, Uttarakhand. Call or WhatsApp +91 63990 12525 for sightseeing and outstation travel.",
+  title: "About Us | Siyaram Travels",
+  description: "Siyaram Travels is based in Dehradun, Uttarakhand. Call or WhatsApp +91 63990 12525 for sightseeing and outstation travel.",
 };
 
 export default function About() {
@@ -10,14 +10,14 @@ export default function About() {
     <div>
       <section className="relative h-[52vh] min-h-[380px] flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/cars/innova.jpg" alt="About Sri Ram Travels" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+        <img src="/cars/innova.jpg" alt="About Siyaram Travels" className="absolute inset-0 w-full h-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/30" />
         <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="inline-flex bg-[#F5B800] text-black text-xs font-extrabold tracking-[0.15em] px-3.5 py-1 rounded-full mb-3 uppercase">
-            ABOUT SRI RAM TRAVELS
+            ABOUT SIYARAM TRAVELS
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-black text-white leading-tight">
-            SRI RAM TRAVELS.<br />
+            SIYARAM TRAVELS.<br />
             <span className="text-[#F5B800]">BASED IN DEHRADUN.</span>
           </h1>
           <p className="text-white/80 mt-3 max-w-xl text-xs sm:text-sm leading-relaxed">
@@ -31,7 +31,7 @@ export default function About() {
           <div>
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-zinc-900">Who We Are</h2>
             <p className="mt-4 text-zinc-600 leading-relaxed text-sm">
-              <strong>Sri Ram Travels</strong> is based in Dehradun, Uttarakhand. We offer local cabs, sightseeing and outstation journeys to popular places including Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett and Auli.
+              <strong>Siyaram Travels</strong> is based in Dehradun, Uttarakhand. We offer local cabs, sightseeing and outstation journeys to popular places including Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett and Auli.
             </p>
             <p className="mt-3 text-zinc-600 leading-relaxed text-sm">
               Whether you are planning a sunrise journey to Robber’s Cave and Sahastradhara in Dehradun, hill views in Mussoorie, riverfronts in Rishikesh and nature trips to Jim Corbett or Rajaji National Park, or need reliable transfers from Jolly Grant Airport and Dehradun Railway Station — we ensure every leg of your trip is completely covered.
@@ -96,7 +96,7 @@ export default function About() {
       {/* Highlights */}
       <section className="py-12 bg-zinc-50">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold">Why Sri Ram Travels with Us?</h2>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">Why Siyaram Travels with Us?</h2>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               ["Easy Trip Planning", "Plan your route and vehicle in one simple conversation."],

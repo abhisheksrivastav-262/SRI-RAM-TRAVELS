@@ -11,7 +11,7 @@ export default function Corporate() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-transparent" />
         <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-[#F5B800] font-bold tracking-[0.2em] text-xs mb-3 uppercase">
-            SRI RAM TRAVELS (SRI RAM TRAVELS)
+            SIYARAM TRAVELS (SIYARAM TRAVELS)
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-black text-white leading-tight">
             CORPORATE OFFSITES &amp; <br /><span className="text-[#F5B800]">GROUP TOURS IN UTTARAKHAND</span>
@@ -63,7 +63,7 @@ export default function Corporate() {
                     const details = Array.from(formData.entries())
                       .map(([label, value]) => `${label}: ${String(value).trim() || "Not provided"}`)
                       .join("\n");
-                    const message = `Namaste Sri Ram Travels!\nNew corporate/group travel enquiry:\n${details}`;
+                    const message = `Namaste Siyaram Travels!\nNew corporate/group travel enquiry:\n${details}`;
                     window.location.assign(`https://wa.me/916399012525?text=${encodeURIComponent(message)}`);
                     setSent(true);
                   }}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import PricingSection from "../components/PricingSection";
 
 export const metadata = {
-  title: "Our Fleet | Sri Ram Travels",
+  title: "Our Fleet | Siyaram Travels",
   description: "Explore our fleet of Toyota Innova, Luxury Tempo Traveller, Maruti Ertiga and Swift Dzire for Dehradun, Mussoorie, Uttarakhand and Uttarakhand tours.",
 };
 
@@ -63,7 +63,7 @@ export default function Fleet() {
             <span className="text-[#F5B800]">HILLS &amp; FORESTS</span>
           </h1>
           <p className="text-white/80 mt-3 max-w-2xl mx-auto text-xs sm:text-sm px-2 leading-relaxed">
-            Sri Ram Travels offers top-tier, sanitized, hill-certified SUVs, Tempo Travellers, MPVs and Sedans. All vehicles driven by courteous, mountain-experienced drivers.
+            Siyaram Travels offers top-tier, sanitized, hill-certified SUVs, Tempo Travellers, MPVs and Sedans. All vehicles driven by courteous, mountain-experienced drivers.
           </p>
         </div>
       </section>

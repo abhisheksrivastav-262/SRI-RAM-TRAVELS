@@ -51,11 +51,11 @@ export default function HeroSlideshow() {
             DEHRADUN • MUSSOORIE • RISHIKESH • UTTARAKHAND
           </div>
           <h1 className="font-display font-black text-[34px] sm:text-[52px] lg:text-[60px] leading-[1.0] sm:leading-[0.95] tracking-tight">
-            SRI RAM<br />
+            SIYARAM<br />
             <span className="text-[#F5B800] text-[28px] sm:text-[44px] lg:text-[50px] block font-extrabold tracking-normal mt-1">TRAVELS</span>
           </h1>
           <p className="mt-4 text-white/90 text-base sm:text-lg max-w-xl leading-relaxed font-medium">
-            Discover <span className="text-[#F5B800] font-bold">Uttarakhand</span> with Sri Ram Travels, based in Dehradun
+            Discover <span className="text-[#F5B800] font-bold">Uttarakhand</span> with Siyaram Travels, based in Dehradun
           </p>
           <p className="mt-2 text-white/70 text-sm max-w-xl">
             Explore Dehradun, Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett and Auli in comfortable vehicles.

@@ -31,14 +31,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Sri Ram Travels */}
+      {/* About Siyaram Travels */}
       <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/cars/traveller.jpg"
-              alt="Sri Ram Travels Tour"
+              alt="Siyaram Travels Tour"
               className="rounded-[20px] sm:rounded-[24px] object-cover w-full h-[320px] sm:h-[430px] shadow-premium"
             />
             <div className="absolute -bottom-6 -right-2 sm:right-6 bg-black text-white rounded-2xl p-5 sm:p-6 shadow-premium max-w-[270px] border border-zinc-800">
@@ -55,14 +55,14 @@ export default function Home() {
           </div>
           <div>
             <div className="text-emerald-700 font-bold tracking-[0.18em] text-xs mb-2 uppercase">
-              ABOUT SRI RAM TRAVELS
+              ABOUT SIYARAM TRAVELS
             </div>
             <h2 className="font-display text-2xl sm:text-4xl font-bold leading-tight text-zinc-900">
               See More of <br />
               <span className="text-[#D4A000]">Uttarakhand with Local Travel</span>
             </h2>
             <p className="mt-4 text-zinc-600 leading-relaxed text-sm sm:text-base">
-              Welcome to <strong>Sri Ram Travels</strong>, based in <strong>Dehradun, Uttarakhand</strong>. We help visitors discover the state’s mountain scenery, riverside towns, temples, forests and hill stations with convenient local and outstation travel.
+              Welcome to <strong>Siyaram Travels</strong>, based in <strong>Dehradun, Uttarakhand</strong>. We help visitors discover the state’s mountain scenery, riverside towns, temples, forests and hill stations with convenient local and outstation travel.
             </p>
             <p className="mt-3 text-zinc-600 leading-relaxed text-sm">
               Plan a trip to Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett or Auli. Choose from the same vehicle fleet shown below and contact us to arrange your route.
@@ -430,7 +430,7 @@ export default function Home() {
                   target="_blank"
                   className="bg-white text-black px-7 py-3.5 rounded-full font-bold text-sm hover:bg-zinc-100 transition text-center min-h-[44px] flex items-center justify-center gap-1.5"
                 >
-                  <span>✆</span> WhatsApp Sri Ram Travels
+                  <span>✆</span> WhatsApp Siyaram Travels
                 </a>
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function Home() {
       {/* Final Call to Action */}
       <section className="py-12 sm:py-16 lg:py-20 bg-[#F5B800] pb-[96px] sm:pb-16 text-black">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-xs font-bold tracking-[0.2em] mb-2 uppercase">SRI RAM TRAVELS</div>
+          <div className="text-xs font-bold tracking-[0.2em] mb-2 uppercase">SIYARAM TRAVELS</div>
           <h2 className="font-display font-black text-3xl sm:text-5xl tracking-tight leading-tight">
             PLAN YOUR UTTARAKHAND TRAVELS TODAY
           </h2>

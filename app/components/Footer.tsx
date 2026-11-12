@@ -22,11 +22,11 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 pb-[88px] sm:pb-14">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" aria-label="Sri Ram Travels home" className="mb-4 inline-flex items-center gap-2.5">
+            <Link href="/" aria-label="Siyaram Travels home" className="mb-4 inline-flex items-center gap-2.5">
               <span className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-[#082452] ring-2 ring-[#F5B800] shadow-md sm:h-20 sm:w-20">
                 <Image
-                  src="/sri-ram-travels-logo.webp"
-                  alt="Sri Ram Travels logo"
+                  src="/siyaram-travels-logo.png"
+                  alt="Siyaram Travels logo"
                   width={1254}
                   height={1254}
                   sizes="(max-width: 640px) 64px, 80px"
@@ -34,7 +34,7 @@ export default function Footer() {
                 />
               </span>
               <span className="font-display text-sm font-extrabold leading-tight tracking-wide text-white sm:text-base">
-                SRI RAM <span className="text-[#B7F000]">TRAVELS</span>
+                SIYARAM <span className="text-[#B7F000]">TRAVELS</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-zinc-400 max-w-xs">
@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <a href="tel:+916399012525" className="block text-white font-bold text-xl hover:text-[#F5B800] transition">+91 63990 12525</a>
               <p className="text-zinc-400 leading-relaxed text-[13px]">
-                Sri Ram Travels<br />
+                Siyaram Travels<br />
                 Dehradun • Mussoorie • Rishikesh • Haridwar • Nainital<br />
                 Uttarakhand, India
               </p>
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between gap-4 text-xs text-zinc-500">
-          <p>© 2026 Sri Ram Travels. All Rights Reserved. Dehradun, Uttarakhand.</p>
+          <p>© 2026 Siyaram Travels. All Rights Reserved. Dehradun, Uttarakhand.</p>
           <div className="flex gap-4">
             <span className="hover:text-zinc-300 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-zinc-300 cursor-pointer">Terms &amp; Conditions</span>

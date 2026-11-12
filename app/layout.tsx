@@ -25,13 +25,13 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sri Ram Travels | Uttarakhand Tours & Taxi Service from Dehradun",
-    template: "%s | Sri Ram Travels",
+    default: "Siyaram Travels | Uttarakhand Tours & Taxi Service from Dehradun",
+    template: "%s | Siyaram Travels",
   },
   description:
-    "Sri Ram Travels offers cab service, sightseeing tours and travel across Uttarakhand from Dehradun. Call or WhatsApp +91 63990 12525.",
+    "Siyaram Travels offers cab service, sightseeing tours and travel across Uttarakhand from Dehradun. Call or WhatsApp +91 63990 12525.",
   keywords: [
-    "Sri Ram Travels",
+    "Siyaram Travels",
     "Dehradun Taxi Service",
     "Mussoorie Taxi Booking",
     "Rishikesh Taxi Service",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     "Dehradun Car Rental",
   ],
   openGraph: {
-    title: "Sri Ram Travels - Uttarakhand Tours & Taxi",
-    description: "Explore Uttarakhand with Sri Ram Travels. Dehradun based cab service, sightseeing tours and easy booking by call or WhatsApp.",
+    title: "Siyaram Travels - Uttarakhand Tours & Taxi",
+    description: "Explore Uttarakhand with Siyaram Travels. Dehradun based cab service, sightseeing tours and easy booking by call or WhatsApp.",
     type: "website",
   },
 };
@@ -69,7 +69,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "TravelAgency",
-              name: "Sri Ram Travels",
+              name: "Siyaram Travels",
               telephone: "+916399012525",
               address: {
                 "@type": "PostalAddress",

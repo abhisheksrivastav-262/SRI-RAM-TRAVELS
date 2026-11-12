@@ -9,11 +9,11 @@ export default function Contact() {
       <section className="bg-black text-white py-14 sm:py-16 text-center">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-[#F5B800] font-bold tracking-[0.2em] text-xs mb-3 uppercase">
-            SRI RAM TRAVELS • DEHRADUN, UTTARAKHAND
+            SIYARAM TRAVELS • DEHRADUN, UTTARAKHAND
           </div>
           <h1 className="font-display text-3xl sm:text-5xl font-black">
             EXPLORE UTTARAKHAND <br />
-            <span className="text-[#F5B800]">WITH SRI RAM TRAVELS</span>
+            <span className="text-[#F5B800]">WITH SIYARAM TRAVELS</span>
           </h1>
           <p className="text-white/70 mt-3 text-xs sm:text-sm max-w-xl mx-auto">
             Based in Dehradun, Uttarakhand. Call or WhatsApp us to plan your trip: +91 63990 12525.
@@ -46,7 +46,7 @@ export default function Contact() {
 
             <div className="bg-white rounded-2xl p-6 border border-zinc-100 shadow-sm">
               <div className="text-xs font-bold tracking-wide text-zinc-400 uppercase">Service Hubs</div>
-              <p className="font-bold text-zinc-900 mt-1">Sri Ram Travels</p>
+              <p className="font-bold text-zinc-900 mt-1">Siyaram Travels</p>
               <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed mt-1">
                 Address: Dehradun, Uttarakhand<br />
                 Sightseeing areas: Dehradun • Mussoorie • Rishikesh • Haridwar • Nainital • Jim Corbett • Auli<br />
@@ -69,7 +69,7 @@ export default function Contact() {
             {!sent ? (
               <>
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-zinc-900">Send an Enquiry</h3>
-                <p className="text-xs text-zinc-500 mt-1">Sri Ram Travels team will contact you with custom quote.</p>
+                <p className="text-xs text-zinc-500 mt-1">Siyaram Travels team will contact you with custom quote.</p>
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -77,7 +77,7 @@ export default function Contact() {
                     const details = Array.from(formData.entries())
                       .map(([label, value]) => `${label}: ${String(value).trim() || "Not provided"}`)
                       .join("\n");
-                    const message = `Namaste Sri Ram Travels!\nNew cab and Uttarakhand tour enquiry:\n${details}`;
+                    const message = `Namaste Siyaram Travels!\nNew cab and Uttarakhand tour enquiry:\n${details}`;
                     window.location.assign(`https://wa.me/916399012525?text=${encodeURIComponent(message)}`);
                     setSent(true);
                   }}
