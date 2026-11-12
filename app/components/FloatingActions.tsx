@@ -5,7 +5,7 @@ export default function FloatingActions() {
       {/* Desktop floating */}
       <div className="hidden sm:flex fixed bottom-6 right-6 z-40 flex-col gap-3">
         <a
-          href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
+          href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
           target="_blank"
           className="w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_8px_25px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-105 transition active:scale-95"
           aria-label="WhatsApp"
@@ -25,7 +25,7 @@ export default function FloatingActions() {
         <a href="tel:+916399012525" className="flex-1 bg-zinc-900 text-white rounded-full py-3.5 text-center text-[14px] font-bold active:scale-[0.98] transition flex items-center justify-center gap-1.5">
           <span>☎</span> Call +91 63990 12525
         </a>
-        <a href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip" target="_blank" className="flex-1 bg-[#25D366] text-white rounded-full py-3.5 text-center text-[14px] font-bold active:scale-[0.98] transition flex items-center justify-center gap-1.5">
+        <a href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip" target="_blank" className="flex-1 bg-[#25D366] text-white rounded-full py-3.5 text-center text-[14px] font-bold active:scale-[0.98] transition flex items-center justify-center gap-1.5">
           <span>✆</span> WhatsApp
         </a>
       </div>

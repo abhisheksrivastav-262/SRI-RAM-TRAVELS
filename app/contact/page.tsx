@@ -35,7 +35,7 @@ export default function Contact() {
                   Call Now
                 </a>
                 <a
-                  href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip."
+                  href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip."
                   target="_blank"
                   className="flex-1 bg-[#25D366] text-white text-center py-3 rounded-full font-bold text-xs sm:text-sm min-h-[44px] flex items-center justify-center gap-1"
                 >

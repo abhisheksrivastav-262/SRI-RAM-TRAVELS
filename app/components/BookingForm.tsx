@@ -281,7 +281,7 @@ export default function BookingForm({ variant = "hero", title }: Props) {
           CALL +91 63990 12525
         </a>
         <a
-          href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
+          href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
           target="_blank"
           className="text-center bg-[#25D366] text-white py-3 rounded-full text-xs font-bold hover:bg-[#20b858] transition min-h-[44px] flex items-center justify-center gap-1"
         >

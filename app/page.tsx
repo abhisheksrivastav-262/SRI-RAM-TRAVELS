@@ -426,7 +426,7 @@ export default function Home() {
                   Plan Your Trip →
                 </Link>
                 <a
-                  href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
+                  href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip"
                   target="_blank"
                   className="bg-white text-black px-7 py-3.5 rounded-full font-bold text-sm hover:bg-zinc-100 transition text-center min-h-[44px] flex items-center justify-center gap-1.5"
                 >

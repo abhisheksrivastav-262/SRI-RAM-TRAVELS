@@ -42,7 +42,7 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex gap-3">
               <a href="tel:+916399012525" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-[#F5B800] hover:text-black transition text-sm">☎</a>
-              <a href="https://wa.me/916399012525?text=Namaste%20Sri%20Ram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip" target="_blank" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition text-sm">✆</a>
+              <a href="https://wa.me/916399012525?text=Namaste%20Siyaram%20Travels%2C%20I%20would%20like%20to%20plan%20a%20Uttarakhand%20trip" target="_blank" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition text-sm">✆</a>
             </div>
           </div>
 
